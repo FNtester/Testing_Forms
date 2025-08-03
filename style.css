@@ -1,0 +1,108 @@
+:root {
+  --brand: #5a2aa6;      /* accessible purple */
+  --brand-dark: #472186;
+  --bg: #f6f6f9;
+  --radius: 0.75rem;
+  --shadow: 0 4px 8px rgba(0,0,0,.15);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--brand);
+  display: grid;                 /* centers content */
+  place-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* ---------- FORM LAYOUT ---------- */
+form{
+    background-color: #fff;
+    width: 100%;
+    max-width:28rem;
+    border: 1px solid black;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem 2rem;
+    display: grid;
+    gap:1.25rem;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--brand-dark);
+    border-bottom: 3px solid var(--brand);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- FIELDS ---------- */
+.field{
+    display:grid;
+    gap:0.5rem;
+}
+
+label{
+    font-weight: 600;
+}
+
+input[type="text"], input[type="color"] ,input[type="search"] ,input[type="date"], input[type="number"] ,input[type="url"], input[type="password"], input[type="email"], select{
+    width:100%;
+    padding:0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius:0.375rem;
+    font-size: 1rem;
+}
+
+input[type="color"]{
+    height: 130%;
+}
+
+select, input[type="range"], input[type="date"], input[type="color"]{
+    cursor: pointer;
+}
+
+/* ---------- GROUPS ---------- */
+fieldset {
+    border:none;
+    padding:0;
+}
+
+legend{
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.choice-row{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-inline-start: 0.25rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* ---------- BUTTON ---------- */
+button{
+    padding:0.5rem 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: var(--brand);
+    color: white;
+    border: 1px solid black;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+/* ---------- STATES ---------- */
+input:focus-visible {
+  outline: 2px solid var(--brand-dark);
+  outline-offset: 2px;
+}
